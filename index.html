@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل رحلات الحج والعمرة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>الأمين للحج والعمرة</h1>
+        <p>سجل بياناتك الآن لرحلات الحج والعمرة القادمة</p>
+    </header>
+
+    <div class="container">
+        <h2>استمارة تسجيل حاج / معتمر</h2>
+        <form id="hajjForm">
+            <label>الاسم بالكامل:</label>
+            <input type="text" id="fullname" required placeholder="أدخل اسمك كما في الجواز">
+
+            <label>رقم الهاتف (واتساب):</label>
+            <input type="tel" id="phone" required placeholder="01XXXXXXXXX">
+
+            <label>نوع الرحلة:</label>
+            <select id="tripType">
+                <option value="عمرة">عمرة</option>
+                <option value="حج">حج</option>
+            </select>
+
+            <label>ملاحظات أو حالة صحية (إن وجد):</label>
+            <textarea id="notes" rows="3" placeholder="أذكر أي حالة صحية أو ملاحظات خاصة"></textarea>
+
+            <button type="submit">إرسال البيانات عبر الواتساب</button>
+        </form>
+    </div>
+
+    <!-- أزرار التواصل العائمة -->
+    <div class="floating-contact">
+        <a href="#" id="whatsappBtn" class="float-btn whatsapp" target="_blank" title="تواصل عبر الواتساب">
+            💬 واتساب
+        </a>
+        <a href="#" id="callBtn" class="float-btn call" title="اتصال هاتفي">
+            📞 اتصال
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
