@@ -1,72 +1,249 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f6f9;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
-header {
-    background-color: #1b4332;
-    color: white;
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #f8f9fa;
+    color: #2b2b2b;
+    line-height: 1.6;
+}
+
+/* الهيدر الرئيسي */
+.hero-header {
+    background: linear-gradient(135deg, #1b4332 0%, #081c15 100%);
+    color: #ffffff;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 60px 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border-bottom: 4px solid #d4af37;
 }
 
-.container {
-    max-width: 500px;
-    background: white;
-    margin: 30px auto;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.hero-header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #f4d58d;
+    margin-bottom: 10px;
 }
 
-h2 {
-    color: #2d6a4f;
-    margin-top: 0;
+.hero-header p {
+    font-size: 1.2rem;
+    color: #d8f3dc;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-label {
+/* قسم الرحلات */
+.trips-section {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #1b4332;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
     display: block;
-    margin-top: 15px;
-    font-weight: bold;
+    width: 60px;
+    height: 3px;
+    background-color: #d4af37;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
-input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
-button {
-    width: 100%;
+.trip-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.trip-card.featured {
+    border: 2px solid #d4af37;
+}
+
+.card-badge {
+    position: absolute;
+    top: -14px;
+    right: 25px;
     background-color: #2d6a4f;
-    color: white;
-    border: none;
-    padding: 12px;
-    margin-top: 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+    color: #ffffff;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
 }
 
-button:hover {
+.card-badge.highlight {
+    background-color: #d4af37;
+    color: #000;
+}
+
+.card-badge.hajj-badge {
     background-color: #1b4332;
+}
+
+.trip-card h3 {
+    font-size: 1.5rem;
+    color: #1b4332;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.trip-date {
+    font-weight: 700;
+    color: #c9a227;
+    margin-bottom: 15px;
+}
+
+.trip-info {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.book-btn {
+    display: block;
+    text-align: center;
+    background-color: #1b4332;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+    background-color: #2d6a4f;
+}
+
+.book-btn.highlight-btn {
+    background-color: #d4af37;
+    color: #000000;
+}
+
+.book-btn.highlight-btn:hover {
+    background-color: #b89528;
+}
+
+/* قسم استمارة التسجيل */
+.form-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    margin-top: 60px;
+    border-top: 1px solid #eaeaea;
+}
+
+.form-container {
+    max-width: 550px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #f0f0f0;
+}
+
+.form-container h2 {
+    color: #1b4332;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.form-subtitle {
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background-color: #fafafa;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #2d6a4f;
+    background-color: #fff;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #25D366;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.submit-btn:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-2px);
 }
 
 /* أزرار التواصل العائمة */
 .floating-contact {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
+    bottom: 25px;
+    left: 25px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     z-index: 1000;
 }
 
@@ -74,18 +251,18 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 18px;
-    color: white;
+    padding: 12px 20px;
+    color: #fff;
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 14px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
     transition: transform 0.2s ease;
 }
 
 .float-btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 
 .float-btn.whatsapp {
@@ -93,5 +270,5 @@ button:hover {
 }
 
 .float-btn.call {
-    background-color: #007bff;
+    background-color: #1b4332;
 }
